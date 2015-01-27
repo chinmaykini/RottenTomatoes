@@ -25,6 +25,7 @@
     
     // set up scrolling
     [self.scroller setScrollEnabled:YES];
+    [self.scroller flashScrollIndicators];
     
     self.title           = self.movie[@"title"];
     [self loadPoster];

@@ -35,7 +35,7 @@
     self.tableView.dataSource   = self;
     self.tableView.delegate     = self;
     self.tableView.rowHeight    = 132;
-    self.title                  = @"Movies";
+    self.title                  = @"Box Office Movies";
     [self.tableView registerNib:[UINib nibWithNibName:@"MovieCell" bundle:nil] forCellReuseIdentifier:@"MovieCell"];
     
     [self loadStartupPage];
@@ -110,7 +110,7 @@
 
 - (void) loadMoviesView{
     
-    NSURL *url = [NSURL URLWithString:@"http://api.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json?apikey=y9fsqggwzyhd8ddxe54aetf6&limit=75&country=us"];
+    NSURL *url = [NSURL URLWithString:@"http://api.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json?apikey=y9fsqggwzyhd8ddxe54aetf6&limit=50&country=us"];
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
