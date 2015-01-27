@@ -110,7 +110,7 @@
 
 - (void) loadMoviesView{
     
-    NSURL *url = [NSURL URLWithString:@"http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/top_rentals.json?apikey=y9fsqggwzyhd8ddxe54aetf6&limit=30&country=us"];
+    NSURL *url = [NSURL URLWithString:@"http://api.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json?apikey=y9fsqggwzyhd8ddxe54aetf6&limit=75&country=us"];
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
